@@ -1,16 +1,8 @@
-var express = require('express');
+const app = require('./app');
+const http = require('http');
 
-var app = express();
-
-app.get('/', function(req, res) {
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('You\'re in reception');
+app.set('port', 3000);
+const server = http.createServer(app);
+server.listen(3000, () => {
+    console.log("Server is listening on port 3000");
 });
-
-app.use(function(req, res, next){
-    res.setHeader('Content-Type', 'text/plain');
-    res.send(404, 'Page cannot be found!');
-});
-
-
-app.listen(3000);
