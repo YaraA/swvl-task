@@ -5,4 +5,4 @@ var GroupSchema = new mongoose.Schema({
     users: [String],
     resources: [String]
   });
-module.exports = mongoose.model('Group', GroupSchema);
+//module.exports = mongoose.model('Group', GroupSchema);
