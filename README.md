@@ -5,7 +5,7 @@ A microservice responsible for handling authorization control.
 ## How to start service
 
 These instructions will get you a copy of the project up and running on your local machine.
-First, open the terminal and cd to the desired directory. Then, write the following commands.
+First, open and run `mongod`. Next, open the terminal and cd to the desired directory. Next, write the following commands.
 
 ```
 git clone https://github.com/YaraA/swvl-task.git
