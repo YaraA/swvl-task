@@ -3,7 +3,6 @@ const async = require('async');
 
 /* Adds group to each user's list of groups  */
 exports.addGroupToUsers = (req, res) => {
-    console.log("Hereee");
     const listOfIds = (req.body).map(user => user.userId);
     async.each(listOfIds, function(userId){
         User.findByIdAndUpdate(userId, { $addToSet: { groups: req.params.id } }, { upsert: true, multi: true })
