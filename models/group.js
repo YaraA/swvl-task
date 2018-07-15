@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
-var GroupSchema = new mongoose.Schema({
+const mongoose = require('mongoose');
+const GroupSchema = new mongoose.Schema({
     name: String,
     description: String,
-    resources: [String]
+    resources: [{ type: mongoose.Schema.Types.ObjectId, ref:'Resource' }]
   });
 module.exports = mongoose.model('Group', GroupSchema);
